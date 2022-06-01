@@ -27,7 +27,7 @@ public class RabbitMqApplication implements CommandLineRunner {
 		String tHeloArray[] = { "Hello World!!", "Hello Venkat!!", "Hello RabbitMQ!!" };
 
 		for (String aMessage : tHeloArray) {
-			LOGGER.info("Sending message to the queue.");
+			LOGGER.info("Sending message to the queue."+ aMessage);
 			messagePublisher.sendMessage(aMessage);
 			LOGGER.info("Message sent successfully to the queue!!!");
 		}

@@ -12,10 +12,7 @@ public class MessageListener {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageListener.class);
 
-	@Autowired
-	Queue queue;
-
-	@RabbitListener(queues = "#{qu.getName()}")
+	@RabbitListener(queues = "#{messagingQueue.getName()}")
 	public void getMsg(final String message) {
 		LOGGER.info("Getting messages.....");
 		LOGGER.info("Finally Receiver received the message and the message  is: " + message);

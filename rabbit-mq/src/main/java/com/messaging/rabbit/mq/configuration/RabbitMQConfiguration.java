@@ -21,7 +21,7 @@ public class RabbitMQConfiguration {
 	private String routingKey;
 
 	@Bean
-	public Queue qu() {
+	public Queue messagingQueue() {
 		return new Queue(qName, Boolean.FALSE);
 	}
 

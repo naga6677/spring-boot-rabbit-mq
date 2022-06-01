@@ -23,7 +23,7 @@ public class RabbitMQController {
 	@ResponseStatus(code = HttpStatus.OK)
 	public String send(@PathVariable("msg") final String aMessage) {
 
-		LOGGER.info("Sending message to the queue.");
+		LOGGER.info("Sending message to the queue." + aMessage);
 		messagePublisher.sendMessage(aMessage);
 		LOGGER.info("Message sent successfully to the queue!!!");
 
