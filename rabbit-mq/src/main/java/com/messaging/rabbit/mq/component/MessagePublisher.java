@@ -19,7 +19,7 @@ public class MessagePublisher {
 
 	public void sendMessage(String aMessage) {
 
-		LOGGER.info("Sending message to the queue.");
+		LOGGER.info("Sending message to the queue.:" + aMessage);
 		rabbitTemplate.convertAndSend(binding.getExchange(), binding.getRoutingKey(), aMessage);
 		LOGGER.info("Message sent successfully to the queue!!!");
 

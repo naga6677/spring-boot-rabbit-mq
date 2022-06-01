@@ -18,6 +18,6 @@ public class MessageListener {
 	@RabbitListener(queues = "#{qu.getName()}")
 	public void getMsg(final String message) {
 		LOGGER.info("Getting messages.....");
-		LOGGER.info("Finally Receiver received the message and the message  is..\n" + message);
+		LOGGER.info("Finally Receiver received the message and the message  is: " + message);
 	}
 }
